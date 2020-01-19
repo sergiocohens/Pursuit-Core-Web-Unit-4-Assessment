@@ -8,7 +8,6 @@ class Home extends React.Component {
     super()
     this.state = {
       searchInput: '',
-      grayText: 'No Search Results. Search for videos above!',
       videosArray: ''
     }
   }
