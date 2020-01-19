@@ -1,13 +1,10 @@
 import React from 'react'
-import { BrowserRouter, Route, Link } from "react-router-dom"
+import { Route, Link } from "react-router-dom"
 import Home from './Components/Home'
 import About from './Components/About'
 import './App.css'
 
 class App extends React.Component {
-  constructor(){
-    super()
-  }
   render() {
     return (
       <div className="App">
