@@ -34,7 +34,7 @@ class Home extends React.Component {
 
   render() {
     const { videosArray } = this.state
-   if (videosArray === '') {
+    if (videosArray === '') {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
@@ -44,7 +44,7 @@ class Home extends React.Component {
           <p className='grayText'>No Search Results. Search for videos above!</p>
         </div>
       )
-   } else {
+    } else {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
@@ -53,7 +53,7 @@ class Home extends React.Component {
           </form>
           <div className='VideoLinksContainer'>
           {videosArray.map((el) => (
-            <VideoLink thumbnail={el.snippet.thumbnails.high.url}/>
+            <VideoLink thumbnail={el.snippet.thumbnails.high.url} id={el.id.videoId} title={el.snippet.title}/>
           ))}
           </div>
         </div>
