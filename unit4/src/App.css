@@ -1,3 +1,118 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif
+}
+
+.navBar {
+  display: flex;
+  height: 50px;
+  background-color: red
+}
+
+#youtube {
+  margin: 14px;
+  color: white;
+  font-size: 16px;
+  font-weight: bolder
+}
+
+#home, #about {
+  margin: 15px;
+  color: white;
+  font-size: 15px;
+  font-weight: normal
+}
+
+.searchForm {
+  margin-top: 7%;
+  margin-left: 15%;
+  margin-right: 15%
+}
+
+#searchBar {
+  width: 80%;
+  height: 30px;
+  padding-left: 7px;
+  border-color: darkgray;
+  border-radius: 6px;
+  border-style: solid
+}
+
+#searchButton {
+  margin-left: 1px;
+  padding: 9px 40px;
+  color: white;
+  font-weight: bold;
+  background-color:red;
+  border-radius: 6px;
+  border-style: none
+}
+
+#grayText {
+  text-align: left;
+  margin-left: 15.5%;
+  margin-right: 15.5%;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  background-color: lightgray;
+  border-radius: 6px
+}
+
+.videoLinksContainer {
+  display: grid;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-template-columns: 50% 50%;
+}
+
+.videoLink {
+  padding: 2%;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.videoContainer {
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+#video {
+  margin-top: 40px
+}
+
+.commentsForm {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
+  flex-direction: row;
+}
+
+.commentsContainer {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 25%
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding-left: 7px;
+  border-color: lightgray;
+  border-radius: 6px;
+  border-style: solid
+}
+
+#submitButton {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 9px 30px;
+  color: white;
+  font-weight: bold;
+  background-color:teal;
+  border-radius: 5px;
+  border-style: none
 }

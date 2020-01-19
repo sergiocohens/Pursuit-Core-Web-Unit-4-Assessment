@@ -36,21 +36,21 @@ class Home extends React.Component {
     if (videosArray === '') {
       return (
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <input type='text' placeholder='Search...' onChange={this.handleSearchInput}></input>
-            <button>Search</button>
+          <form className='searchForm' onSubmit={this.handleSubmit}>
+            <input id='searchBar' type='text' placeholder='Search...' onChange={this.handleSearchInput}></input>
+            <button id='searchButton'>Search</button>
           </form>
-          <p className='grayText'>No Search Results. Search for videos above!</p>
+          <p id='grayText'>No Search Results. Search for videos above!</p>
         </div>
       )
     } else {
       return (
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <input type='text' placeholder='Search...' onChange={this.handleSearchInput}></input>
-            <button>Search</button>
+          <form className='searchForm' onSubmit={this.handleSubmit}>
+            <input id='searchBar' type='text' placeholder='Search...' onChange={this.handleSearchInput}></input>
+            <button id='searchButton'>Search</button>
           </form>
-          <div className='VideoLinksContainer'>
+          <div className='videoLinksContainer'>
           {videosArray.map((el) => (
             <VideoLink thumbnail={el.snippet.thumbnails.high.url} id={el.id.videoId} title={el.snippet.title}/>
           ))}

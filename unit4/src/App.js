@@ -10,9 +10,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <nav className='navBar'>
-          <Link to="/">Home</Link>
-          {"  "}
-          <Link to="/about">About</Link>
+          <span id='youtube'>Youtube</span>
+          <Link to="/" style={{ textDecoration: 'none' }} id='home'>Home</Link>
+          <Link to="/about" style={{ textDecoration: 'none' }} id='about'>About</Link>
         </nav>
         <div>
           <Route exact path="/" component={Home} />

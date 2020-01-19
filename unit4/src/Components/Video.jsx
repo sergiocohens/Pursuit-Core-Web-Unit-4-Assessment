@@ -38,6 +38,8 @@ class Video extends React.Component {
       }
       comments.unshift(commentObj)
       this.setState({
+        nameInput: '',
+        commentInput: '',
         comments: comments
       })
     } else {
@@ -51,24 +53,26 @@ class Video extends React.Component {
       width: '640',
       autoplay: 1
     }
-    const { id, comments, reminder } = this.state
+    const { id, comments, commentInput, nameInput} = this.state
     return (
 
-      <div>
+      <div className='videoContainer'>
         <YouTube
           videoId={id}
           opts= {opts}
           onReady= {this._onReady}
+          id='video'
         />
-        <form onSubmit={this.handleSubmit}>
+        <form className='commentsForm' onSubmit={this.handleSubmit}>
           <h4>Name</h4>
-          <input type='text' placeholder='Name...' onChange={this.handleNameInput}></input>
+          <input className='input' type='text' placeholder='Name...' onChange={this.handleNameInput} value={nameInput}></input>
           <h4>Comment</h4>
-          <input type='text' onChange={this.handleCommentInput}></input>
+          <input className='input' type='text' placeholder='...' onChange={this.handleCommentInput} value={commentInput}></input>
           <br/>
-          <button>Submit</button>
+          <button id='submitButton'>Submit</button>
         </form>
         <div className='commentsContainer'>
+          <hr></hr>
           {comments.map((e) => (
             <Comment name={e.name} comment={e.comment}/>
           ))}

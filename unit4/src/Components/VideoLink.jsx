@@ -6,9 +6,9 @@ function VideoLink(props) {
   return(
     <div className='videoLink'>
       <Link to={url}>
-      <img src={props.thumbnail} alt=''></img>
+      <img className='thumbnail' src={props.thumbnail} alt=''></img>
       </Link>
-      <h3>{props.title}</h3>
+      <h4>{props.title}</h4>
     </div>
   )
 }
