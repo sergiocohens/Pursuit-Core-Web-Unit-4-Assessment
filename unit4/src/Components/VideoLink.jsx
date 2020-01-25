@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function VideoLink(props) {
+const VideoLink = (props) => {
   let url = `/video/${props.id}`
   return(
     <div className='videoLink'>
